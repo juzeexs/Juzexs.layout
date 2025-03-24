@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com Ícones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header, .footer {
+            background-color: #1E90FF;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            height: 80px;
+        }
+        .header .icons {
+            display: flex;
+            gap: 15px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 10px;
+            padding: 10px;
+            height: calc(100vh - 160px);
+        }
+        .navigation, .sidebar {
+            background-color: #00FFAA;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content {
+            background-color: #FF0080;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            height: 80px;
+            align-items: center;
+        }
+        .icon-list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .icon-list i {
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <i class="fa fa-search fa-2x"></i>
+        <div class="icons">
+            <i class="fa fa-bars fa-2x"></i>
+            <i class="fa fa-cog fa-2x"></i>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="navigation">
+            <div class="icon-list">
+                <i class="fa fa-home"></i>
+                <i class="fa fa-user"></i>
+                <i class="fa fa-envelope"></i>
+                <i class="fa fa-bell"></i>
+            </div>
+        </aside>
+        <main class="content">
+            <div class="icon-list">
+                <i class="fa fa-file"></i>
+                <i class="fa fa-image"></i>
+                <i class="fa fa-video"></i>
+                <i class="fa fa-music"></i>
+            </div>
+        </main>
+        <aside class="sidebar">
+            <div class="icon-list">
+                <i class="fa fa-chart-bar"></i>
+                <i class="fa fa-calendar"></i>
+                <i class="fa fa-map"></i>
+                <i class="fa fa-comments"></i>
+            </div>
+        </aside>
+    </div>
+    <footer class="footer">
+        <i class="fa-brands fa-facebook fa-2x"></i>
+        <i class="fa-brands fa-twitter fa-2x"></i>
+        <i class="fa-brands fa-instagram fa-2x"></i>
+    </footer>
+</body>
+</html>
